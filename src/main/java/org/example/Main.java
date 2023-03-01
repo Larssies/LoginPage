@@ -56,7 +56,7 @@ public class Main {
                 System.out.println("Password incorrect!");
             }
         } else {
-            System.out.println("This email does not exist in our database! Type 'register' to register an email or type 'back' to go back");
+            System.out.println("This email does not exist in our database! Type 'register' to register an email or type 'back' to try it again");
 
             String after = sc.nextLine();
 
@@ -90,12 +90,17 @@ public class Main {
                     e.printStackTrace();
                 }
 
-                System.out.println("Thank you! You have been registered and you may now login!");
+                System.out.println("Thank you! You have been registered and you may now login! Relaunch to login!");
 
 
             } else {
                 if(after.equals("back")) {
-                    return;
+                    run();
+                } else {
+                    if(!after.equals("stop") || !after.equals("register")) {
+                        System.out.println("That's not a valid argument. Shutting down the application!");
+                        return;
+                    }
                 }
             }
         }
