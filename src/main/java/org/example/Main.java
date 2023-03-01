@@ -10,12 +10,12 @@ public class Main {
 
     static Map<String, String> login = new HashMap<>();
 
-    final static String outputFilePath = "src/main/resources/data.txt";
+    final static String outputFilePath = "C:\\Users\\larsv\\data.txt";
 
     public static void main(String[] args) {
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("src/main/resources/data.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\larsv\\data.txt"));
             String line;
 
             while ((line = br.readLine()) != null) {
@@ -91,8 +91,8 @@ public class Main {
                     e.printStackTrace();
                 }
 
-                System.out.println("Thank you! You have been registered and you may now login! Relaunch to login!");
-
+                System.out.println("Thank you! You have been registered and you may now login!");
+                run();
 
             } else {
                 if(after.equals("back")) {
