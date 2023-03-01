@@ -53,7 +53,8 @@ public class Main {
             if(login.get(email).equals(password)) {
                 System.out.println("You have been logged in!");
             } else {
-                System.out.println("Password incorrect!");
+                System.out.println("Password incorrect! Try again!");
+                run();
             }
         } else {
             System.out.println("This email does not exist in our database! Type 'register' to register an email or type 'back' to try it again");
