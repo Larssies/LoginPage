@@ -12,7 +12,7 @@ public class Main {
 
     final static String outputFilePath = "C:\\Users\\larsv\\data.txt";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         try {
             BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\larsv\\data.txt"));
@@ -35,7 +35,7 @@ public class Main {
 
     }
 
-    public static void run() {
+    public static void run() throws IOException {
 
         Scanner sc = new Scanner(System.in);
 
