@@ -1,5 +1,7 @@
 # LoginPage
-Made a login page using Java. 
+Made a simple login page using Java. 
+
+Made by Larssies
 
 Instructions:
 1. Open Command Prompt
