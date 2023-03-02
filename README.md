@@ -3,6 +3,9 @@ Made a simple login page using Java.
 
 Made by Larssies
 
+THE FILE DOES NOT WORK WHEN RAN BY CLICKING ON IT 
+use the instructions down below to get it to run!
+
 Instructions:
 1. Open Command Prompt
 2. Copy the file path
