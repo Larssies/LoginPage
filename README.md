@@ -15,3 +15,7 @@ Edit this in the code:
 1. create a file anywhere on your pc and copy the file path (I recommend saving it as a data.txt file)
 1. "final static String outputFilePath = "CHANGE THIS TO YOUR FILE PATH";"
 2. "BufferedReader br = new BufferedReader(new FileReader("CHANGE THIS TO YOUR FILE PATH"));"
+
+If you encounter any errors please contact Larssies#2828 on Discord
+
+Thank you!
