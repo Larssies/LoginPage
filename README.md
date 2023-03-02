@@ -11,6 +11,7 @@ Instructions:
 2. Copy the file path
 3. Download Java at https://java.com/
 4. Type "java -jar "file path""
+![image](https://user-images.githubusercontent.com/81554085/222456113-60bbd5e0-4b51-420e-a79d-1b16e5eb9e37.png)
 5. Press enter
 6. Ur done!
 
