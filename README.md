@@ -21,4 +21,6 @@ Edit this in the code:
 
 If you encounter any errors please contact Larssies#2828 on Discord
 
+If you want to use this in one of your public projects please contact me about it!
+
 Thank you!
