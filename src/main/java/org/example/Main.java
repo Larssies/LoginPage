@@ -4,6 +4,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class Main {
@@ -65,40 +66,43 @@ public class Main {
                 System.out.println("What is your email that you want to use");
 
                 String email1 = sc.nextLine();
+                if(!login.containsKey(email1)) {
+                    System.out.println("What password do you want to use");
 
-                System.out.println("What password do you want to use");
+                    String password1 = sc.nextLine();
 
-                String password1 = sc.nextLine();
+                    login.put(email1, password1);
 
-                login.put(email1, password1);
+                    File file = new File(outputFilePath);
 
-                File file = new File(outputFilePath);
+                    BufferedWriter bf = null;
 
-                BufferedWriter bf = null;
+                    try {
+                        bf = new BufferedWriter(new FileWriter(file));
 
-                try {
-                    bf = new BufferedWriter(new FileWriter(file));
+                        for (Map.Entry<String, String> entry : login.entrySet()) {
+                            bf.write(entry.getKey() + ":" + entry.getValue());
+                            bf.newLine();
+                        }
 
-                    for(Map.Entry<String, String> entry : login.entrySet()) {
-                        bf.write(entry.getKey() + ":" + entry.getValue());
-                        bf.newLine();
+                        bf.flush();
+
+                    } catch (IOException e) {
+                        System.out.println("An error occurred!");
+                        e.printStackTrace();
                     }
 
-                    bf.flush();
-
-                } catch (IOException e) {
-                    System.out.println("An error occurred!");
-                    e.printStackTrace();
-                }
-
-                System.out.println("Thank you! You have been registered and you may now login!");
-                run();
-
-            } else {
-                if(after.equals("back")) {
+                    System.out.println("Thank you! You have been registered and you may now login!");
                     run();
                 } else {
-                    if(!after.equals("stop") || !after.equals("register")) {
+                    System.out.println("An account with this email already exists, try again.");
+                    run();
+                }
+            } else {
+                if (after.equals("back")) {
+                    run();
+                } else {
+                    if (!after.equals("stop") || !after.equals("register")) {
                         System.out.println("That's not a valid argument. Shutting down the application!");
                         return;
                     }
