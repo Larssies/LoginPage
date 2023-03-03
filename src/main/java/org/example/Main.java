@@ -44,7 +44,7 @@ public class Main {
 
         System.out.println("What's your email");
 
-        String email = sc.nextLine();
+        String email = sc.nextLine().toLowerCase();
 
         if(login.containsKey(email)) {
             System.out.println("What's your password");
@@ -62,10 +62,10 @@ public class Main {
 
             String after = sc.nextLine();
 
-            if(after.equals("register")) {
+            if(after.equalsIgnoreCase("register")) {
                 System.out.println("What is your email that you want to use");
 
-                String email1 = sc.nextLine();
+                String email1 = sc.nextLine().toLowerCase();
                 if(!login.containsKey(email1)) {
                     System.out.println("What password do you want to use");
 
@@ -99,10 +99,10 @@ public class Main {
                     run();
                 }
             } else {
-                if (after.equals("back")) {
+                if (after.equalsIgnoreCase("back")) {
                     run();
                 } else {
-                    if (!after.equals("stop") || !after.equals("register")) {
+                    if (!after.equalsIgnoreCase("stop") || !after.equalsIgnoreCase("register")) {
                         System.out.println("That's not a valid argument. Shutting down the application!");
                         return;
                     }
