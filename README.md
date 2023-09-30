@@ -19,7 +19,7 @@ Edit this in the code:
 1. "final static String outputFilePath = "CHANGE THIS TO YOUR FILE PATH";"
 2. "BufferedReader br = new BufferedReader(new FileReader("CHANGE THIS TO YOUR FILE PATH"));"
 
-If you encounter any errors please contact Larssies#2828 on Discord
+If you encounter any errors please contact @larssies on Discord
 
 If you want to use this in one of your public projects please contact me about it!
 
